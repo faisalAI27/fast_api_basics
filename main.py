@@ -6,3 +6,11 @@ def read_root():
 @app.post("/items/")
 def create_item(name: str, price: float):
     return{'name':name, 'price': price}
+
+@app.put("/items/{item_id}")
+def update_item(item_id:int,name:str,price:float):
+    return{'item id':item_id,"name":name,"price":price}
+
+@app.delete("/items/{item_id}")
+def delete_item(item_id:int,name:str,price:float):
+    return{"message":f"item id: {item_id} deleted successfully"}
