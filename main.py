@@ -12,5 +12,5 @@ def update_item(item_id:int,name:str,price:float):
     return{'item id':item_id,"name":name,"price":price}
 
 @app.delete("/items/{item_id}")
-def delete_item(item_id:int,name:str,price:float):
+def delete_item(item_id:int):
     return{"message":f"item id: {item_id} deleted successfully"}
